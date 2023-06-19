@@ -27,19 +27,19 @@ end
 #  action :create
 #end
 
-remote_file_s3 '/home/ubuntu/app/app.py' do
-	bucket 'my-storage-apk'
-	remote_path 'app/app.py'
-	aws_access_key_id 'AKIAWYQUEW3AQI3NF53Y'
-	aws_secret_access_key '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'
-	region 'us-west-2'
-	action :create
-end
+# remote_file_s3 '/home/ubuntu/app/app.py' do
+# 	bucket 'my-storage-apk'
+# 	remote_path 'app/app.py'
+# 	aws_access_key_id 'AKIAWYQUEW3AQI3NF53Y'
+# 	aws_secret_access_key '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'
+# 	region 'us-west-2'
+# 	action :create
+# end
 
 
 execute "run-flask-apk"  do
 	command 'nohup python3 app.py > /dev/null 2>&1 &'
-	cwd '/home/ubuntu/app/'
+	cwd '/home/ubuntu/Weather_APK/'
 	user 'root'
 	action :run
 end
