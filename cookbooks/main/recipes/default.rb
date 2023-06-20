@@ -37,12 +37,12 @@ end
 # end
 
 
-execute "run-flask-apk"  do
-	command 'nohup python3 app.py > /dev/null 2>&1 &'
-	cwd '/home/ubuntu/Weather_APK/'
-	user 'root'
-	action :run
-end
+# execute "run-flask-apk"  do
+# 	command 'nohup python3 app.py > /dev/null 2>&1 &'
+# 	cwd '/home/ubuntu/Weather_APK/'
+# 	user 'root'
+# 	action :run
+# end
 
 #cron 'runinng_main' do
 #	minute '*/1'
